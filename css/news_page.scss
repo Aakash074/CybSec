@@ -1,0 +1,65 @@
+#news {
+    .hide-scroll{
+        margin-right: -100px;
+        padding-right: 100px;
+    }
+    a.title{
+        &:link, &:hover, &:visited, &active{
+            text-decoration: none;
+        }
+    }
+    .is-ancestor{
+       padding: 32px; 
+    }
+    h4.feed-item-title{
+        a:link, a:hover, a:visited, a:active{
+            color: #2e7ec8;
+            font-size: 16px;
+        }
+    }
+    p{
+        font-size: 12px;
+        a:link, a:hover, a:visited, a:active{
+            color: #2e7ec8;
+        }
+    }
+    div.pracScroll{
+        height: 150px;
+        overflow: auto;
+        @extend .hide-scroll;
+    }
+    div.SecMagContent{
+        height: 150px;
+        overflow: hidden;
+    }
+    div.ThreatPostContent{
+        height: 350px;
+        overflow: hidden;
+    }
+    div.ThreatPostScroll{
+        height: 350px;
+        overflow: auto;
+        @extend .hide-scroll;
+    }
+    div.WiredContent{
+        height: 405px;
+        overflow: hidden;
+    }
+    div.WiredScroll{
+        height: 405px;
+        overflow: auto;
+        @extend .hide-scroll;
+    }
+    div.HackerNewsContent{
+        height: 835px;
+        overflow: hidden;
+    }
+    div.HackerNewsScroll{
+        height: 835px;
+        overflow: auto;
+        @extend .hide-scroll;
+    }
+    div.rss2html-note{
+        display: none;
+    }
+}

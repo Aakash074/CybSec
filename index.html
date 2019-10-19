@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>CybSec Home</title>
+
+    <!--Linking the css file (generated using sass and Bulma)-->
+    <link rel="stylesheet" type="text/css" href="./styles.min.css" />
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Colors the URL bar in Chrome on mobile only-->
+    <meta name="theme-color" content="#EC644B" />
+    <!--To control layout on mobile browsers-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="The home page for CyberEdu @ UMD. This page includes a link to the CyberEdu game." />
+    <!--Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+    <!--Font awesome icons loaded before </body> tag-->
+
+</head>
+
+<body>
+
+    <!--Navigation Bar-->
+    <nav class="navbar">
+    </nav>
+
+    <!--The script below loads the Navigation bar and toggles the appropriate tab-->
+    <script>
+        $(function(){
+            $('.navbar').load('./html/navigation_bar.html', function(){
+                $('#game-tab').addClass('is-active');
+                <!--Change the links because index.html has a slightly different file path-->
+                $('#cyberedu-home-logo').attr('href', './index.html');
+                $('#cyberedu-home-logo img').attr('src', './assets/CyberEdu_logo.png');
+                $('#game-tab').attr('href', './index.html#game');
+                $('#exercises-tab').attr('href', './html/exercises_page.html#exercises');
+                $('#news-tab').attr('href', './html/news_page.html');
+                $('#videos-tab').attr('href', './html/videos_page.html');
+                $('#team-tab').attr('href', './index.html#team');
+                $('#about-tab').attr('href', './index.html#about');
+                $('#resources-tab').attr('href', './html/resources_page.html');
+            });
+        });
+    </script>
+
+    <!--This is for the Landing Page (includes the Game and About sections)-->
+    <div id="landing">
+     
+
+        <!--Section dedicated towards the CyberEdu Game-->
+        <div id="game">
+
+                <section id="game-play" class="hero is-dark is-bold is-medium">
+                    <div class="hero-body">
+                        <div class="container has-text-centered">
+                            <p class="title is-1 is-spaced">
+                                CybSec
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="game-info" class="hero is-light">
+
+              <!--      <div class="hero-head">
+                        <div class="container has-text-centered">
+                            <p class="title is-1">
+                                The CybSec
+                            </p>
+                        </div>
+                    </div> -->
+
+       <!--             <div class="hero-body desktop-width-limited">
+                        <div class="container">
+                            <h1 class="title is-3 is-spaced">
+                                What's the CybSec Game?
+                            </h1>
+                            <p class="subtitle is-5">
+                                Playing as
+                                a college student immersed in the cyber world, students
+                                experience several scenes that teach cybersecurity
+                                topics relevant today. With the game's modules and
+                                accompanied videos, players gain practical knowledge
+                                about items such as safe downloads, Wi-Fi security,
+                                app permissions, and spear phishing. All while in a
+                                virtual gaming environment with a compelling storyline.
+                                <br /><br />
+                                Developed by students at
+                                <a href="https://www.nitw.ac.in/" target="_blank" rel="noreferrer noopener">
+                                    National Institute of Technology, Warangal
+                                </a>
+                                the CybSec Game is an interactive game that teaches
+                                students everyday concepts in cybersecurity.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+        </div>
+
+        <!--Section dedicated towards the About Section-->
+        <section id="about" class="hero is-primary">
+
+    <!--        <div class="hero-head">
+                <div class="container has-text-centered">
+                    <p class="title is-1">
+                        About
+                    </p>
+                </div>
+            </div>     -->
+
+            <div class="hero-body desktop-width-limited">
+                <div class="container">
+
+                    <h1 class="title is-3 is-spaced">
+                        What is CybSec?
+                    </h1>
+                    <h2 class="subtitle is-spaced">
+                       CybSec is a cyber-security group in National Institute of Technology, Warangal, India, which tries to spread awarenes and respond to cyber-threats in the campus.
+                       <br>
+                       <br>
+                       Formed in the year of 2019 by Innovation Garage, NITW, CybSec includes a bunch of students experienced in Ethical Hacking fields like web-exploitation, cryptography, forensics, etc.
+
+                    </h2>
+
+            <!--        <h1 class="title is-3 is-spaced">
+                        Why CybSec?
+                    </h1>
+                    <h2 class="subtitle is-spaced">
+                        We built CybSec to help others stay safe while using their computer.
+                        By informing users on the potential risks and how one can mitigate them,
+                        we hope our platform will reduce the number of cyber victims.
+                    </h2>  -->
+
+                    <h1 class="title is-3 is-spaced">
+                        What is our purpose?
+                    </h1>
+                    <h2 class="subtitle is-spaced">
+                        The purpose of this team is to evaluate the security of and identify vulnerabilities in the systems, networks or system infrastructure. It includes finding and attempting to exploit any vulnerabilities to determine whether unauthorised access etc.
+                    </h2>
+
+                    <!--About video-->
+                    <h1 class="title is-3 is-spaced">
+                        <a href="https://igconnect.in/" style="color:white"><u>
+                        Innovation Garage</u></a>
+                    </h1>
+                    <h2 class="subtitle is-spaced">
+                        Innovation Garage is a 24x7 student run multidisciplinary work space for innovation at <a href="https://www.nitw.ac.in/" style="color:white"><u> NIT Warangal. </u></a>
+                    </h2>
+
+                    <div class="has-text-centered video">
+                        <iframe width="966" height="543" src="https://www.youtube.com/embed/4hfikvQviQQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--Section dedicated towards to the Team Section-->
+        <section id="team" class="hero is-light is-medium">
+
+            <!--Current Team
+
+            <div class="hero-head">
+                <div class="container has-text-centered">
+                    <p class="title is-1">
+                        Our Team
+                    </p>
+                </div>
+            </div>
+
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <div class="columns is-desktop">
+
+                        <div class="team-member column">
+                            <img class="headshot" alt="Picture of Erik" src="./assets/headshots/Erik_headshot.jpg">
+                            <p class="title is-4">Erik Ochoa
+                                <a href="//github.com/erik-ochoa" target="_blank" rel="noreferrer noopener">
+                                    <span class="icon">
+                                        <i class="fa fa-external-link"></i>
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="subtitle is-6">Project Lead</p>
+                        </div>
+
+                        <div id="omkar" class="team-member column">
+                            <img class="headshot" alt="Picture of Omkar" src="./assets/headshots/Omkar_headshot.jpg">
+                            <p class="title is-4">Omkar Konaraddi
+                                <a href="//konaraddio.com" target="_blank" rel="noreferrer noopener">
+                                    <span class="icon">
+                                        <i class="fa fa-external-link"></i>
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="subtitle is-6">Lead Developer</p>
+                        </div>
+
+                        <div class="team-member column">
+                            <img class="headshot" alt="Picture of Katrina" src="./assets/headshots/Katrina_headshot.jpg">
+                            <p class="title is-4">Katrina Delos Reyes
+                                <a href="//github.com/kdreyes" target="_blank" rel="noreferrer noopener">
+                                    <span class="icon">
+                                        <i class="fa fa-external-link"></i>
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="subtitle is-6">Developer</p>
+                        </div>
+
+                        <div class="team-member column">
+                            <img class="headshot" alt="Picture of Ibrahim" src="./assets/headshots/Ibrahim_headshot.jpg">
+                            <p class="title is-4">Ibrahim Jirdeh
+                                <a href="//github.com/ijirdeh5" target="_blank" rel="noreferrer noopener">
+                                    <span class="icon">
+                                        <i class="fa fa-external-link"></i>
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="subtitle is-6">Developer</p>
+                        </div>
+
+                        <div class="team-member column">
+                            <img class="headshot" alt="Picture of Selena" src="./assets/headshots/Selena_headshot.jpg">
+                            <p class="title is-4">Selena Alvarado
+                                <a href="//github.com/salvarado" target="_blank" rel="noreferrer noopener">
+                                    <span class="icon">
+                                        <i class="fa fa-external-link"></i>
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="subtitle is-6">Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Previous Team--
+            <div id="original-team" class="hero-head">
+                <div class="container has-text-centered">
+                    <p class="title is-1">
+                        Previous Team
+                        <p>
+                            <b>2013 - 2017</b>
+                        </p>
+                    </p>
+                </div>
+            </div>
+
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <div class="columns is-desktop">
+
+                        <div class="team-member column">
+                            <p class="title is-4">Bobby Crumbaugh</p>
+                            <p class="subtitle is-6">Project Lead</p>
+                        </div>
+
+                        <div class="team-member column">
+                            <p class="title is-4">Jonathan Hansford</p>
+                            <p class="subtitle is-6">Lead Developer</p>
+                        </div>
+
+                        <div class="team-member column">
+                            <p class="title is-4">Corbin Ford</p>
+                            <p class="subtitle is-6">Developer</p>
+                        </div>
+
+                        <div class="team-member column">
+                            <p class="title is-4">Jules Iglesia</p>
+                            <p class="subtitle is-6">Developer</p>
+                        </div>
+
+                        <div class="team-member column">
+                            <p class="title is-4">Grant Hoover</p>
+                            <p class="subtitle is-6">Lead Video Designer</p>
+                        </div>
+
+                        <div class="team-member column">
+                            <p class="title is-4">Akil Alleyne</p>
+                            <p class="subtitle is-6">Lead Graphic Artist</p>
+                        </div>
+
+                        <div class="team-member column">
+                            <p class="title is-4">Jasmine Thomas</p>
+                            <p class="subtitle is-6">Graphic Artist</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!--A warning displayed if the user chooses to play the game on mobile-->
+  <!--      <div id="mobile-warning" class="has-text-centered notification is-danger">
+            This game is not well suited for mobile devices.
+            It is strongly recommended to <b>use a desktop or larger screen</b>.
+        </div> -->
+
+    </div>
+
+
+    <!--Footer-->
+    <div id="footer">
+    </div>
+
+    <!--Loading the Footer above and other scripts-->
+    <script>
+        $(function() {
+            $('#footer').load('./html/footer.html');
+        });
+
+        var playButton= document.querySelector("#game-play a.button");
+
+        playButton.onclick= startGame;
+
+        function startGame(){
+
+            if(window.innerWidth <= 768){
+                //display warning message on mobile that the user should use a desktop to play the game
+                $('#mobile-warning').addClass('show');
+                setTimeout(function(){
+                    $('#mobile-warning').removeClass('show');
+                }, 5000);
+            }else{
+                window.open('http://cyberedu.umd.edu', '_blank');
+            }
+
+        }
+    </script>
+
+    <!--Load font awesome icons-->
+    <noscript id="deferred-styles">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </noscript>
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
+
+
+</body>
+
+</html>

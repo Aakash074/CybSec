@@ -1,0 +1,47 @@
+$orange: #EC644B;
+$blue: #446CB3;
+$red: #D24D57;
+$dark: #363636;
+$primary: $orange;
+/*Font linked in <head> of html pages*/
+$family-primary: "Lato", sans-serif;
+@import "./node_modules/bulma/sass/utilities/_all.sass";
+
+@import "./node_modules/bulma/sass/base/_all.sass";
+
+@import "./node_modules/bulma/sass/elements/_all.sass";
+
+@import "./node_modules/bulma/sass/grid/_all.sass";
+
+@import "./node_modules/bulma/sass/components/card.sass";
+@import "./node_modules/bulma/sass/components/navbar.sass";
+@import "./node_modules/bulma/sass/components/menu.sass";
+
+@import "./node_modules/bulma/sass/layout/hero.sass";
+@import "./node_modules/bulma/sass/layout/section.sass";
+
+.navbar{
+    border-bottom: solid 1px $dark;
+
+    .navbar-menu {
+        text-transform: uppercase;
+    }
+}
+
+#footer a.icon{
+    color: $primary;
+    :hover{
+        color: $white;
+    }
+}
+
+/*The below is for the home/landing page*/
+@import "./css/landing_page.scss";
+/*The below is for the exercises page*/
+@import "./css/exercises_page.scss";
+/*The below is for the news page*/
+@import "./css/news_page.scss";
+/*The below is for the videos page*/
+@import "./css/videos_page.scss";
+/*The below is for the resources page*/
+@import "./css/resources_page.scss";

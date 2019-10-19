@@ -1,0 +1,84 @@
+---
+permalink: /404.html
+---
+<!--The YAML frontmatter above will set this page as the error 404 page for Github Pages-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Linking the css file (generated using sass and Bulma)-->
+    <link rel="stylesheet" type="text/css" href="../styles.min.css">
+
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--Colors the URL bar in Chrome on mobile only-->
+    <meta name="theme-color" content="#EC644B">
+
+    <!--To control layout on mobile browsers-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    <!--Navigation Bar-->
+    <nav class="nav has-shadow">
+    </nav>
+
+    <!--The script below loads the Navigation bar and toggles the appropriate tab-->
+    <script>
+        $(function(){
+            $('.nav').load('./html/navigation_bar.html', function(){
+                $('#game-tab').addClass('is-active');
+
+                <!--Change the links because index.html has a slightly different file path-->
+                $('#cyberedu-home-logo').attr('href', './index.html');
+                $('#cyberedu-home-logo img').attr('src', './assets/CyberEdu_logo.png');
+                $('#game-tab').attr('href', './index.html#game');
+                $('#exercises-tab').attr('href', './html/exercises_page.html#exercises');
+                $('#news-tab').attr('href', './html/news_page.html');
+                $('#videos-tab').attr('href', './html/videos_page.html');
+                $('#team-tab').attr('href', './index.html#team');
+                $('#about-tab').attr('href', './index.html#about');
+                $('#resources-tab').attr('href', './html/resources_page.html');
+            });
+        });
+    </script>
+
+    <!--This is for the File Not Found Page-->
+    <div id="error-page">
+
+        <div class="hero is-primary is-fullheight">
+
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <p class="title is-1 is-spaced">
+                        Error 404
+                    </p>
+                    <p class="subtitle is-3">
+                        Sorry, we couldn't find this file. 
+                        <br><br>:(
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--Footer-->
+    <div id="footer">
+    </div>
+
+    <!--Loading the Footer above-->
+    <script>
+        $(function() {
+            $('#footer').load('./html/footer.html');
+        });
+    </script>
+
+</body>
+
+</html>

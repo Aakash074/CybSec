@@ -1,0 +1,40 @@
+{
+  "scripts": {
+    "build": "./build.sh",
+    "test": "echo 'testing npm run to see if it's working and, if u see this, it's working'",
+    "start": "./node_modules/.bin/http-server -a localhost -p 8000 -c-1"
+  },
+  "comments": [
+    "Don't forget to give build.sh the executable permission.",
+    "Although this isn't a legitimate npm package, the dependencies and devdependencies should be taken note of."
+  ],
+  "name": "umdcyberedu.github.io",
+  "description": "![UMD CyberEdu logo](./assets/CyberEdu_logo.png) ![UMD Logo](./assets/umd_logo.png)",
+  "version": "1.0.0",
+  "main": "index.html",
+  "devDependencies": {
+    "bulma": "^0.4.4",
+    "http-server": "^0.11.1",
+    "minify": "^3.0.5",
+    "mustache": "^2.3.0",
+    "node-sass": "^4.9.0",
+    "purify-css": "^1.2.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UMDCyberEdu/umdcyberedu.github.io.git"
+  },
+  "keywords": [
+    "UMD",
+    "CyberEdu",
+    "Cybersecurity",
+    "Education"
+  ],
+  "author": "Omkar Konaraddi, Erik Ochoa, Ibrahim Jirdeh, Katrina Delos Reyes, Selena Alvarado",
+  "license": "GNU GPLv3",
+  "bugs": {
+    "url": "https://github.com/UMDCyberEdu/umdcyberedu.github.io/issues"
+  },
+  "homepage": "https://github.com/UMDCyberEdu/umdcyberedu.github.io#readme",
+  "dependencies": {}
+}
