@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CybSec Exercises</title>
+
+    <!--Linking the css file (generated using sass and Bulma)-->
+    <link rel="stylesheet" type="text/css" href="../styles.min.css">
+    <!--Icons-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--How secure is my password -->
+    <link rel="stylesheet" href="../css/hsimp.jquery.css">
+    <!--Colors the URL bar in Chrome on mobile only-->
+    <meta name="theme-color" content="#EC644B">
+    <!--To control layout on mobile browsers-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--How secure is my password -->
+    <script src="../js/hsimp.jquery.min.js"></script>
+
+    <!-- custom js -->
+    <script src="../js/exercises_page.js"></script>
+    <meta name="description" content="Exercises for students, made by CyberEdu @ UMD." />
+
+    <!--Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <nav class="navbar">
+    </nav>
+
+    <script>
+        $(function(){
+            $('.navbar').load('./navigation_bar.html', function(){
+                $('#exercises-tab').addClass('is-active');
+            });
+        });
+    </script>
+
+    <!-- exercises -->
+    <div id="exercises">
+        <!-- Welcome message -->
+        <section class="hero is-fullheight" id="welcome_container" style="display:none">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <p class="title is-1">Welcome</p>
+                    <p class="subtitle is-2"> Let's Begin </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- columns for exercises -->
+        <div class="columns" id="mycolumns">
+            <!-- Menue column -->
+            <div class="column is-2 is-hidden-mobile is-paddingless" id="menu_column" style="display:none">
+                <aside class="menu" id="menu">
+                  <ul class="menu-list">
+                    <li>
+                      <p class="menu-label">Phishing</p>
+                      <ul>
+                        <li><span class="tag is-primary is-active is-small" id="menu1" onClick="changeSection('1','menu')">Learn</span></li>
+                        <li><span class="tag is-primary is-small" id="menu2" onClick="changeSection('2','menu')">Exercise</span></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="menu-label">Passwords</p>
+                      <ul>
+                        <li><span class="tag is-primary is-small" id="menu3" onClick="changeSection('3','menu')">Learn</span></li>
+                        <li><span class="tag is-primary is-small" id="menu4" onClick="changeSection('4','menu')">Exercise</span></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p class="menu-label">Malware</p>
+                      <ul>
+                        <li><span class="tag is-primary is-small" id="menu5" onClick="changeSection('5','menu')">Learn</span></li>
+                        <li><span class="tag is-primary is-small" id="menu6" onClick="changeSection('6','menu')">Exercise</span></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </aside>
+            </div>
+            <!-- Menu column end -->
+
+            <!-- phishing learn -->
+            <div class="column is-10 section1" id="phishing_learn" style="display:none">
+                <h1 class="title is-3"><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;Learn to Protect Yourself Against a Phishing Email</h1>
+                <div class="tile is-ancestor">
+                    <div class="tile is-6 is-vertical is-parent">
+                        <div class="tile is-child box">
+                            <p class="title is-5">How to Detect a Phishing Email</p>
+                            <ol>
+                                <li>After you open an email, <span class="highlight">hover</span> your mouse over what could be a <span class="highlight">link </span>(this includes regular blue-highlighted links and images). <br> A link will appear either by your cursor or on the <span class="highlight">bottom left corner</span> of your window. If it appears <span class="highlight">suspicious</span>, don't click it because it is probably a phishing email.
+                                </li>
+                                <br>
+                                <li><span class="highlight">Spelling mistakes or grammatical errors</span></li>
+                                <br>
+                                <li><span class="highlight">Vague salutation</span> such as "Dear Customer"</li>
+                                <br>
+                                <li><span class="highlight">Urgernt and threatening language</span></li>
+                                <br>
+                                <li><span class="highlight"> Suspicious Sender</span>. For example, signature has a suspicious email address, or the reply-to address is suspicious</li>
+                                <br>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="tile is-parent">
+                        <div class="tile is-child box">
+                            <img src="../assets/exercises/phishing_learn1.png" alt="Image">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="tile is-ancestor">
+                    <div class="tile is-6 is-vertical is-parent">
+                        <div class="tile is-child box">
+                            <p class="title is-5">You Got a Phishing Email, What to Do Now?</p>
+                            <p class="highlight">Do not click on any of the links</p>
+                            <p>If you are a student that lives on campus and is using the school's WiFi, then your school should have a system to <span class="highlight">report phishing emails.</span><br><br>You can also report phishing and learn more about it at <a href="https://https://www.cert-in.org.in/" rel="noopener noreferrer" target="_blank">https://www.cert-in.org.in/</a></p>
+                        </div>
+                    </div>
+                    <div class="tile is-parent">
+                        <div class="tile is-child box">
+                            <a href="https://www.cert-in.org.in/" rel="noopener noreferrer" target="_blank"><img src="../assets/exercises/phishing_learn2.png" alt="Image"></a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="tile is-ancestor">
+                    <div class="tile is-6 is-vertical is-parent">
+                        <div class="tile is-child box">
+                            <p class="title is-5">Still Not Sure If It's a Phishing Email?</p>
+                            <p>Don't give personal information.</p><br>
+                            <p>Do your research before doing anything drastic such as clicking on any links or downloading any files.</p><br>
+                            <p>Google can be your friend. If you get an email from an organization or individual, lets say IFTTT, you should not click on any links on the email or reply with any personal information. Instead go to Google or open an new window and go to IFTTT's official website and find out if you need to do anything with your account.</p>
+                        </div>
+                    </div>
+                    <div class="tile is-parent is-vertical">
+                        <div class="tile is-child box">
+                            <img src="../assets/exercises/phishing_learn3.png" alt="Image">
+                        </div>
+                    </div>
+                </div>
+                <h1 class="title is-3"><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;Other Forms of Scams</h1>
+                <div class="tile is-ancestor">
+                    <div class="tile is-parent is-vertical">
+                        <div class="tile is-child box">
+                            <p class="title is-4">Pharming</p>
+                            <p>When you type a URL for a certain website, an attacker can redirect you to a malicious website even if the user enters the correct website name.</p>
+                            <p>To protect against most pharming attacks, you should only enter your credentails to HTTPS protected websties</p>
+                        </div>
+                        <div class="tile is-child box">
+                            <p class="title is-4">Social Engineering Attack</p>
+                            <p class="title is-6">Scenario 1) Email.</p>
+                            <p>An Attacker may hack one of your friends emails or social media accounts. Then, the attacker sends an email to every freind. When you open the email, you see it's from your friend so you click on the licks inside and suddently something downloads to your computer without your permission. This may be a virus. Most successful phishing and malware attacks occur because the user CLICKS something without thinking twice.</p><br>
+                            <p class="title is-6">Scenario 2) Telephone</p>
+                            <p>If you get a call an organization or individual asking for help, telling you that you need to make a change to your account, or saying your won something, it is probably a scam. Do your research before giving any information away.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="prev_next_container">
+                    <div class="is-inline-flex is-pulled-right">
+                        <i class="fa fa-arrow-right" aria-hidden="true"  onClick="changeSection('1','next')"></i>
+                    </div>
+                </div>
+                <br><br>
+            </div>
+            <!-- phishing learn end -->
+
+            <!-- phising exercise -->
+            <div class="column is-7 section2" id="center_column" style="display:none;">
+                <!-- center container -->
+                <div class="has-text-centered" id="test_container">
+
+                    <div class="has-text-centered" id="test_head_container">
+                        <h2 class="title is-5" id="test_head">TEST: QUESTION <span>1</span></h2>
+                        <progress class="progress is-primary is-small" id="progress" value="33" max="100">33%</progress>
+                    </div>
+
+                    <div class="has-text-centered is-inline-block" id="test_card">
+                        <!-- Questions inside card -->
+                        <div class="questions" id="question1">
+                            <img class="test_image" src="../assets/exercises/phishing_exercise1.png" alt="Image">
+                            <div class="test_card_footer">
+                                <h4 class="subtitle is-6 question">&nbsp;&nbsp;<i>Is this email legit or a scam?</i></h4>
+                                <a class="button is-focused is-primary is-small" onclick="answer('phishing')"> Phishing</a>
+                                <a class="button is-focused is-dark is-small" onclick="answer('legit')"> Legitimate</a>
+                                <div class="toast">
+                                    <i class="fa fa-check correct" aria-hidden="true" id="correct1" style="color:green; display:none;"></i>
+                                    <i class="fa fa-times incorrect" aria-hidden="true" id="incorrect1" style="color:red; display:none;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questions" id="question2" style="display: none;">
+                            <img class="test_image" src="../assets/exercises/phishing_exercise2.png" alt="Image">
+                            <div class="test_card_footer">
+                                <h4 class="subtitle is-6 question">&nbsp;&nbsp;<i>Is this email legit or a scam?</i></h4>
+                                <a class="button is-focused is-primary is-small" onclick="answer('phishing')"> Phishing</a>
+                                <a class="button is-focused is-dark is-small" onclick="answer('legit')"> Legitimate</a>
+                                <div class="toast">
+                                    <i class="fa fa-check correct" aria-hidden="true" id="correct1" style="color:green; display:none;"></i>
+                                    <i class="fa fa-times incorrect" aria-hidden="true" id="incorrect1" style="color:red; display:none;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questions" id="question3" style="display: none;">
+                            <img class="test_image" src="../assets/exercises/phishing_exercise3.png" alt="Image">
+                            <div class="test_card_footer">
+                                <h4 class="subtitle is-6 question">&nbsp;&nbsp;<i>Is this email legit or a scam?</i></h4>
+                                <a class="button is-focused is-primary is-small" onclick="answer('phishing')"> Phishing</a>
+                                <a class="button is-focused is-dark is-small" onclick="answer('legit')"> Legitimate</a>
+                                <div class="toast">
+                                    <i class="fa fa-check correct" aria-hidden="true" id="correct1" style="color:green; display:none;"></i>
+                                    <i class="fa fa-times incorrect" aria-hidden="true" id="incorrect1" style="color:red; display:none;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Questions end -->
+
+                    <div class="prev_next_container">
+                        <div class="is-inline-flex is-pulled-left" id="left">
+                            <i class="fa fa-arrow-left" aria-hidden="true" onClick="validate('prev')"></i>
+                        </div>
+                        <div class="notification is-success is-inline" id="notification_right" style="display:none;">
+                            <button class="delete" id="notification_delete1"></button>
+                            Correct
+                        </div>
+                        <div class="notification is-danger is-inline" id="notification_wrong" style="display:none;">
+                            <button class="delete" id="notification_delete2"></button>
+                            Incorrect
+                        </div>
+                        <div class="is-inline-flex is-pulled-right" id="right">
+                            <i class="fa fa-arrow-right" aria-hidden="true" onClick="validate('next')"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- center container end -->
+            </div>
+            <!--center column end -->
+
+            <!-- right column -->
+            <div class="column is-3 section2" id="right_column" style="display:none;">
+                <div class="feedback_containers" id="feedback_container1" style="display:none">
+                    <div class="has-text-centered feedback_head">
+                        <h2 class="title is-5">Feeback Q1</h2>
+                    </div>
+                    <div class="tile is-ancestor">
+                        <div class="tile is-12 is-vertical is-parent">
+                            <div class="tile is-child box">
+                                <p>This is a phishing email.</p><br>
+                                <p>Why? </p>
+                                <p>1) The from address is not from Bank of America</p>
+                                <p>2) Vague Salutation, "Dear Customer"</p>
+                                <p>3) Urgent Language</p><br>
+                                <p>Note: Organizations such as Bank of America will never ask you to click on links to confirm or change password/information</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feedback_containers" id="feedback_container2" style="display:none">
+                    <div class="has-text-centered feedback_head">
+                        <h2 class="title is-5">Feedback Q2</h2>
+                    </div>
+                    <div class="tile is-ancestor">
+                        <div class="tile is-12 is-vertical is-parent">
+                            <div class="tile is-child box">
+                                <p>This is a phishing email.</p><br>
+                                <p>Why? </p>
+                                <p>1) The email has bad grammar and spelling.</p>
+                                <p>2) The email has "urgent" language. In this case, "Warning!"</p>
+                                <p>3) If you were to hover over the Click here link, you would see that the link doesn't take to to PayPal's website:</p>
+                                <img src="../assets/exercises/phishing_feedback1.png"><br>
+                                <p>Note: Organizations such as PayPal will never ask you to click on links to confirm or change password/information</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feedback_containers" id="feedback_container3" style="display:none">
+                    <div class="has-text-centered feedback_head">
+                        <h2 class="title is-5">Feedback Q3</h2>
+                    </div>
+                    <div class="tile is-ancestor">
+                        <div class="tile is-12 is-vertical is-parent">
+                            <div class="tile is-child box">
+                                <p>This is a phishing email.</p><br>
+                                <p>Why?</p>
+                                <p>1) The replay-to address is not the same as the from field</p><br>
+                                <p><span class="highlight">Final Important Note:</span> Some phishing emails are harder to detect. So, just doon't click on links. Instead, open a new window and access your online account(s) the same way you always do or call the organization (In this case, the IRS)</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br><br><br><br>
+            </div>
+            <!-- right column end-->
+            <!-- phishing exercise end -->
+
+            <!-- passwords learn -->
+            <div class="column is-10 section3" id="passwords_learn" style="display:none;">
+                <h1 class="title is-3"><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;Learn to Make a Strong and Memorable Password</h1>
+
+                <div class="tile is-ancestor">
+                  <div class="tile is-6 is-vertical is-parent">
+                    <div class="tile is-child box">
+                        <p class="title is-5">Step One</p>
+                        <p>Think of a <span class="highlight">memorable sentence</span></p>
+                    </div>
+                  </div>
+                  <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <p class="title is-5">Example</p>
+                        <a id="squirrel">The Flying Squirrel Is A Furry Animal</a>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="tile is-ancestor">
+                  <div class="tile is-6 is-vertical is-parent">
+                    <div class="tile is-child box">
+                        <p class="title is-5">Step Two</p>
+                        <p>Take the <span class="highlight">letter</span> from the <span class="highlight">beginning</span> of each word</p>
+                    </div>
+                  </div>
+                  <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <p class="title is-5">Example</p>
+                        <p>
+                            <span class="highlight">T</span>he
+                            <span class="highlight">F</span>lying
+                            <span class="highlight">S</span>quirrel
+                            <span class="highlight">I</span>s
+                            <span class="highlight">A</span>
+                            <span class="highlight">F</span>urry
+                            <span class="highlight">A</span>nimal
+                            <br><br> Result: <span class="highlight"> tfsiafa</span>
+                        </p>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="tile is-ancestor">
+                  <div class="tile is-6 is-vertical is-parent">
+                    <div class="tile is-child box">
+                        <p class="title is-5">Step Three</p>
+                        <p>
+                            Take your <span class="highlight">favorite word(s)</span> from the sentence and change it's corresponding letter(s) to <span class="highlight">Capital Letter(s)</span>
+                        </p>
+                    </div>
+                  </div>
+                  <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <p class="title is-5">Example</p>
+                        <p>
+                            The <span class="highlight">Flying Squirrel</span> Is A Furry Animal
+                            <br><br> Result: t<span class="highlight">FS</span>iafa
+                        </p>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="tile is-ancestor">
+                  <div class="tile is-6 is-vertical is-parent">
+                    <div class="tile is-child box">
+                        <p class="title is-5">Step Four</p>
+                        <p>
+                            Add <span class="highlight">numbers</span> and <span class="highlight">symbols.</span>
+                            <br><br>
+                            Here I add $4 after my favorite words (Flying Squirrel) to make it easier to rember where the number and symbol goes.
+                            <br><br>The password will be more secure if the number and symbols are in the middle of the password and not at the end or beginning.
+                            <br><br> <span class="highlight">Remember to make your password long. The longer it is, the more secure it is.</span>
+                        </p>
+                    </div>
+                  </div>
+                  <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <p class="title is-5">Example</p>
+                        <p>
+                            The Flying Squirrel <span class="highlight">$4</span> Is A Furry Animal
+                            <br><br> Result: tFS<span class="highlight">$4</span>iafa
+
+                            <br><br> Final Password: <span class="highlight">tFS$4iafa</span>
+                        </p>
+                    </div>
+                  </div>
+                </div>
+                <h1 class="title is-3"><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;Tips</h1>
+                <div class="tile is-ancestor">
+                    <div class="tile is-parent is-vertical">
+                        <div class="tile is-child box">
+                            <p>1) Use Password Managers </p>
+                        </div>
+                        <div class="tile is-child box">
+                            <p>2) Don't use the same password twice </p>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="prev_next_container">
+                    <div class="is-inline-flex is-pulled-left">
+                        <i class="fa fa-arrow-left" aria-hidden="true" onClick="changeSection('3','prev')"></i>
+                    </div>
+                    <div class="is-inline-flex is-pulled-right">
+                        <i class="fa fa-arrow-right" aria-hidden="true"  onClick="changeSection('3','next')"></i>
+                    </div>
+                </div>
+                <br><br>
+            </div>
+            <!-- passwords learn end -->
+
+            <!-- passwords exercise -->
+            <div class="column is-10 section4" id="passwords_exercise" style="display:none">
+                <h1 class="title is-3"><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;Practice Creating a Strong Password</h1>
+                <div class="tile is-ancestor">
+                    <div class="tile is-parent">
+                        <div class="tile is-child box">
+                            <div id="how_secure">
+                                <label>Enter Password</label>
+                                <input id="password-1" type="password" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile is-ancestor">
+                    <div class="tile is-parent is-vertical">
+                        <div class="tile is-child box">
+                            <p>The feature above is powered by <a src="https://howsecureismypassword.net/" rel="noopener noreferrer" target="_blank">How Secure Is My Password?</a> website</p>
+                        </div>
+                        <div class="tile is-child box">
+                            <h2 class="title is-5">Final Notes</h2>
+                            <p>When we enter the password: <span class="highlight">tFS$4iaca</span>, <br> it shows that it can cracked in <span class="highlight">4 months</span></p>
+                            <br>
+                            <p>However, <br>If we add another character (such as <span class="highlight">7</span>) at the end, the password becomes <span class="highlight">tFS$4iaca7</span>. <br>If we enter this password, the time to crack the password increases to <span class="highlight">23 years</span>. <br>This shows that <span class="highlight">length is very important</span> when making a secure password.</p>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="tile is-parent">
+                        <div class="tile is-child box">
+                            <div>
+                                <a src="https://howsecureismypassword.net/" rel="noopener noreferrer" target="_blank"><img src="../assets/exercises/passwords_exercise1.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prev_next_container">
+                    <div class="is-inline-flex is-pulled-left">
+                        <i class="fa fa-arrow-left" aria-hidden="true" onClick="changeSection('4','prev')"></i>
+                    </div>
+                    <div class="is-inline-flex is-pulled-right">
+                        <i class="fa fa-arrow-right" aria-hidden="true"  onClick="changeSection('4','next')"></i>
+                    </div>
+                </div>
+                <br><br>
+            </div>
+            <!-- passwords exercise end -->
+            
+            <!-- malware learn -->
+            <div class="column is-10 section5" id="malware_learn" style="display:none">
+                <h1 class="title is-3"><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;Learn to Protect Yourself From Dangerous Malware</h1>
+                <div class="tile is-ancestor">
+                    <div class="tile is-12 is-vertical is-parent">
+                        <div class="tile is-child box">
+                            <p class="title is-5">Use an Antivirus</p>
+                            <p>There are free and paid antivirus software. Not even the most expensive antivirus software can protect your computer from every single threat. You can be the most powerful antivirus. Don't click or download suspicious content. <br>However, we do recommend that you use at least a free antivirus software such as Avast.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile is-ancestor">
+                    <div class="tile is-12 is-vertical is-parent">
+                        <div class="tile is-child box">
+                            <p class="title is-5">Use a Pop-Up Blocker</p>
+                            <p>Using a pop-up blocker can prevent websites from opening links to dangerous web pages. Although most pop-ups are just advertisements, they can also contain malicious content. We recommend you use a pop-up blocker. If you use Google Chrome, you can use the official AdBlock extension.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile is-ancestor">
+                    <div class="tile is-12 is-vertical is-parent">
+                        <div class="tile is-child box">
+                            <p class="title is-5">Use a Firewall</p>
+                            <p>If you are using Windows make sure the Windows Firewall is turned on. This can protect your computer from viruses, worms, and hackers traying to donwload malware to your computer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile is-ancestor">
+                    <div class="tile is-12 is-vertical is-parent">
+                        <div class="tile is-child box">
+                            <p class="title is-5">Backup Your Computer</p>
+                            <p>Backup your files automatically so that if you get a virus that compromises your computer, you can completly reset your computer without worrying about losing your files</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile is-ancestor">
+                    <div class="tile is-12 is-vertical is-parent">
+                        <div class="tile is-child box">
+                            <p class="title is-5">Don't Click!</p>
+                            <p>Most users get malware because they click on something on an unsafe webstie. For Example: </p><br>
+                            <p>There are dangerous web pages online such as a movie streaming pages (Let's call this the "IE" pages, where IE stands for Illegal Entertaitnment).</p>
+                            <p>Most of the times, if you click anywhere on an IE page, a pop-up will appear, or a new page will be opened in a new tab (Let's call this page the M page, where M stands for malware). Antiviruses and pop-up blockers can prevent most pop-ups (M pages). However, they will not stop every single one.</p>
+                            <p>Many times, pop-up blockers won't be able to stop new pages (M Pages) from being open in a new tab. These M pages may contain ads and link, which could download malware to your computer.</p><br>
+                            <p>Think before you click.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="prev_next_container">
+                    <div class="is-inline-flex is-pulled-left">
+                        <i class="fa fa-arrow-left" aria-hidden="true" onClick="changeSection('5','prev')"></i>
+                    </div>
+                    <div class="is-inline-flex is-pulled-right">
+                        <i class="fa fa-arrow-right" aria-hidden="true"  onClick="changeSection('5','next')"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- malware learn end -->
+
+            <!-- malware exercise -->
+            <div class="column is-10 section6" id="malware_exercise" style="display:none">
+                <h1 class="title is-3"><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;Practice Not Downloading Malware</h1>
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-parent">
+                        <div class="tile is-child box">
+                            <p class="title is-5">Malicious Page</p>
+                            <p>Imagine you are on an IE page and there is a link with the word "START". It doesn't look suspicious, so you click it. What you didn't know is that a M page will be opened in a new tab.</p><br>
+                            <p>Once you click "START" right below, a page will open in a new tab, and your job is to leave without triggering anything that could potentially download malware to your computer. The page is just a simulation and your computer will not be harmed with any malware.</p><br>
+                        </div>
+                        <div class="tile is-child box has-text-centered">
+                            <a id="malware_start"  onclick="window.open('malware.html')">START</a>
+                        </div>
+                        <div class="tile is-child box">
+                            <p class="title is-5">After you have finished the exercise..</p>
+                            <p class="blurry-text" id="closing_window">When an M page is open, the best thing to do is to leave immediatly. Don't click on anything, but rather use your keyboard shortcuts to leave the page. <br><br> On Windows, press CTRL + W. Then, click leave on the confirmation message (if there is any).<br><br> On Mac, press COMMAND + W. Then, click leave on the confirmation message (if there is any).</p><br>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="prev_next_container">
+                    <div class="is-inline-flex is-pulled-left">
+                        <i class="fa fa-arrow-left" aria-hidden="true" onClick="changeSection('6','prev')"></i>
+                    </div>
+                    <div class="is-inline-flex is-pulled-right">
+                        <i class="fa fa-arrow-right" aria-hidden="true"  onClick="changeSection('6','next')"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- malware exercise end -->
+
+        </div>
+        <!-- columns end -->
+    </div>
+    <!-- exercises end -->
+
+    <!--Footer-->
+    <div id="footer">
+    </div>
+    <!--Loading the Footer above -->
+    <script>
+        $(function() {
+            $('#footer').load('./footer.html');
+        });
+    </script>
+
+</body>
+</html>
